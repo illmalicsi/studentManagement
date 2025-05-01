@@ -1,97 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Student Management Web App</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-bar">
-        <form id="studentForm">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="firstName">First Name:</label>
-              <input type="text" id="firstName" />
-            </div>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-            <div class="form-group">
-              <label for="lastName">Last Name:</label>
-              <input type="text" id="lastName" />
-            </div>
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <img src="images/logoedp.png" alt="Logo" class="logo">
+        <span class="system-name">Student Management System</span>
+    </div>
+</nav>
 
-            <div class="form-group">
-              <label for="birthdate">Birthdate:</label>
-              <input type="date" id="birthdate" />
-            </div>
+<div class="container">
+    <div class="top-bar">
+        <div class="form-wrapper">
+            <form id="studentForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName">
+                    </div>
 
-            <div class="form-group">
-              <label>Gender:</label>
-              <div class="gender-options">
-                <label
-                  ><input type="radio" name="gender" value="Male" /> Male</label
-                >
-                <label
-                  ><input type="radio" name="gender" value="Female" />
-                  Female</label
-                >
-              </div>
-            </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName">
+                    </div>
 
-            <div class="form-group">
-              <label for="course">Course:</label>
-              <select id="course">
-                <option value="">Select Course</option>
-                <option value="BS Computer Science">BS Computer Science</option>
-                <option value="BS Data Science">BS Data Science</option>
-                <option value="BS Information Systems">
-                  BS Information Systems
-                </option>
-                <option value="BS Information Technology">
-                  BS Information Technology
-                </option>
-              </select>
-            </div>
+                    <div class="form-group">
+                        <label for="birthdate">Birthdate:</label>
+                        <input type="date" id="birthdate">
+                    </div>
 
-            <div class="consent-group">
-              <label>
-                <input type="checkbox" id="consent" />
-                I consent to the use of the information I provided for archiving
-                student records.
-              </label>
-            </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div class="gender-options">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                        </div>
+                    </div>
 
-            <div class="buttons">
-              <button type="button" onclick="addStudent()">Add</button>
-              <button type="reset">Reset</button>
-            </div>
-          </div>
-        </form>
+                    <div class="form-group">
+                        <label for="course">Course:</label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option value="BS Computer Science">BS Computer Science</option>
+                            <option value="BS Data Science">BS Data Science</option>
+                            <option value="BS Information Systems">BS Information Systems</option>
+                            <option value="BS Information Technology">BS Information Technology</option>
+                        </select>
+                    </div>
+
+                    <div class="consent-group">
+                        <label>
+                            <input type="checkbox" id="consent">
+                            I consent that the information I provided will be used for archiving student records.
+                        </label>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="button" onclick="addStudent()">Add</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
         <div class="search-box">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search by Full Name..."
-            onkeyup="filterStudents()"
-          />
+            <input type="text" id="searchInput" placeholder="Search by Full Name..." onkeyup="filterStudents()">
         </div>
-      </div>
-
-      <table id="studentTable">
-        <thead>
-          <tr>
-            <th>Full Name</th>
-            <th>Birthdate</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Course</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
     </div>
 
-    <script src="app.js"></script>
-  </body>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Birthdate</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+</body>
 </html>
